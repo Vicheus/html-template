@@ -1,3 +1,6 @@
+@import "../utils/vars"
+@import "../utils/mixins"
+
 .test
   width: 100px
   height: 100px
@@ -13,3 +16,12 @@
   background-image: url("../assets/img/photo.png")
   width: 100px
   height: 100px
+
+.box
+  width: 400px
+  height: 400px
+  padding: 50px
+  border: 1px solid $mainGrey
+
+.my-btn
+  @include button-default($lightBlue)

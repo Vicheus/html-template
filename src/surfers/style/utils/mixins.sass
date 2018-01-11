@@ -1,0 +1,29 @@
+@import "vars"
+
+@mixin button($bgColor)
+  overflow: hidden
+  box-sizing: border-box
+  padding: 17px 30px
+  font-family: $titleFont
+  font-weight: $bold
+  font-size: 12px
+  text-transform: uppercase
+  color: $white
+  border: 1px solid $bgColor
+  cursor: pointer
+  transition: all
+  &:after
+    content: ''
+    background-color: $white
+
+  &:hover
+
+
+@mixin button-outline($bgColor)
+  @include button($bgColor)
+  background-color: transparent
+
+@mixin button-default($bgColor)
+  @include button($bgColor)
+  background-color: $bgColor
+
