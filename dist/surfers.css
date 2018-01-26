@@ -183,6 +183,25 @@ table {
   border-spacing: 0;
 }
 
+.overlay--black-09 {
+  width: 100%;
+  height: inherit;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.s__main {
+  width: 100%;
+  height: 100vh;
+  background-image: url(5b9595e9c8acfa9a5d332148ece6fb50.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.s__main__border_shadow {
+  box-shadow: inset 0 -150px 150px -30px #ffffff;
+}
+
 .test {
   width: 100px;
   height: 100px;
