@@ -1,0 +1,57 @@
+@import "../utils/mixins"
+@import "../utils/utils"
+
+.header__menu
+  display: flex
+  width: 100%
+  list-style: none
+  @include mobile
+    display: none
+.menu__toggle-nav
+  display: none
+  font-size: 2em
+  color: transparentize($black, .3)
+  &:active
+    background-color: inherit
+  @include mobile
+    display: block
+.header__menu__item
+  padding: .55em .45em
+  font-size: 1.2em
+  text-align: center
+  transition-duration: .15s
+  transition-timing-function: ease-in-out
+  transition-property: box-shadow, background, color, text-align, padding
+  cursor: pointer
+  @include mobile
+    padding: 10px
+    text-align: left
+    background-color: transparentize($black, .3)
+  &:hover
+    color: $white
+    text-align: left
+  > a
+    font-size: 0.7em
+    text-transform: uppercase
+    color: inherit
+    transition: inherit
+    padding: 2px 4px
+    &:hover
+      background-color: $lightBlue
+
+@include mobile
+  .menu ul
+    position: absolute
+    top: 120%
+    left: 0
+    &:after
+      width: 0
+      height: 0
+      position: absolute
+      top: 0
+      left: calc(50% - 7px)
+      content: ''
+      transform: translate(0%, -100%)
+      border-left: 7px solid transparent
+      border-right: 7px solid transparent
+      border-bottom: 7px solid #303030

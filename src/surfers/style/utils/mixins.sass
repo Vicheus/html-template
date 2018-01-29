@@ -26,6 +26,9 @@
   background-color: $bgColor
 
 @mixin overlay-mixin($color, $transparency)
+  position: absolute
+  top: 0
+  left: 0
   width: 100%
   height: inherit
   background: transparentize($color, $transparency)
@@ -45,3 +48,14 @@
   -moz-box-shadow: $params
   box-shadow: $params
 
+@mixin mobile
+  @media (max-width: #{$tablet-width - 1px})
+    @content
+
+@mixin tablet
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+
+@mixin desktop
+  @media (min-width: #{$desktop-width})
+    @content

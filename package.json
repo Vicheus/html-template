@@ -8,7 +8,7 @@
     "start": "webpack --watch"
   },
   "author": "Olexandr Kononchuk",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",

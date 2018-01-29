@@ -1,38 +1,50 @@
 @import "../utils/vars"
 @import "../utils/mixins"
+@import "../base/fonts"
 
 .s__main
+  position: relative
   width: 100%
   height: 100vh
   background-image: url("../assets/img/Surfing.png")
   background-size: cover
   background-position: center
   background-repeat: no-repeat
+  font-family: sans-serif
+  > header
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    margin-top: 30px
+
+.header__logo
+  font-size: 2em
+  font-weight: bold
 
 .s__main__border_shadow
   box-shadow: inset 0 -150px 150px -30px $white
 
-.test
-  width: 100px
-  height: 100px
-  font-family: "Playfair Display", sans-serif
-  font-style: italic
-  font-weight: bold
-  background-color: aquamarine
+.header__social
+  display: inline-block
+  width: 2em
+  height: 2em
+  border-radius: 50%
+  background-color: $black
+  color: $white
+  text-align: center
+  > svg
+    height: 2em
 
-.test__img
-  width: 100px
-
-.my_bg_img
-  background-image: url("../assets/img/photo.png")
-  width: 100px
-  height: 100px
-
-.box
-  width: 400px
-  height: 400px
-  padding: 50px
-  border: 1px solid $mainGrey
-
-.my-btn
-  @include button-default($lightBlue)
+.s__main__slogan
+  padding-top: 210px
+  text-align: center
+  > h1
+    font-family: "Playfair Display", sans-serif
+    font-style: italic
+    font-size: 3em
+  > h3
+    font-family: "Playfair Display", sans-serif
+    font-style: italic
+    font-size: 1.5em
+    color: $white

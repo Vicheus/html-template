@@ -24,11 +24,11 @@ module.exports = {
                 }),
             },
             {
-                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                test: /\.(png|woff|woff2|eot|ttf|svg)(\?\S*)?$/,
                 loader: 'url-loader?limit=100000'
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
                 loader: 'file-loader?name=public/fonts/[name].[ext]'
             }
         ]
