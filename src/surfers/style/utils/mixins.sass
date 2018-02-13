@@ -11,10 +11,13 @@
   color: $white
   border: 1px solid $bgColor
   cursor: pointer
-  transition: all
+  transition: all .3s linear
   &:after
     content: ''
     background-color: $white
+  &:hover
+    background-color: transparent
+    color: $bgColor
 
 
 @mixin button-outline($bgColor)

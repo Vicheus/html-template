@@ -1,0 +1,117 @@
+.s__about_us__bg_image
+  width: 100%
+  height: 640px
+  position: relative
+  background: url('../assets/img/Surfer.png') no-repeat center
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: transparentize($black, .8)
+
+.s__about_us__content
+  display: flex
+  align-items: flex-end
+  transform: translateY(-300px)
+
+.s__about_us__content__article
+  width: 946px
+  padding: 100px 125px 40px 477px
+  background-color: $white
+  font-size: 20px
+  font-family: 'Playfair Display', sans-serif
+  color: $darkGrey
+  margin-right: 50px
+
+.s__about_us__content__article__title
+  position: relative
+  margin-bottom: 70px
+  text-align: center
+  text-transform: uppercase
+  &:before, &:after
+    content: ''
+    position: absolute
+    background: $darkGrey
+    transform: rotateZ(45deg)
+  &:before
+    top: 40px
+    left: calc(50% + 5px)
+    width: 3px
+    margin-left: -1.5px
+    height: 20px
+  &:after
+    top: 50px
+    left: calc(50% - 5px)
+    height: 3px
+    margin-top: -1.5px
+    width: 20px
+
+.s__about_us__content__article__text
+  line-height: 1.7
+  margin-bottom: 25px
+
+.s__about_us__content__article__link
+  position: relative
+  color: $lightBlue
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -7px
+    height: 4px
+    width: 0
+    background-color: $lightBlue
+    transition: width .3s linear
+  &:hover
+    &:after
+      width: 100%
+
+.s__about_us__content__video
+  position: relative
+  overflow: hidden
+  width: 500px
+  height: 300px
+  background: #000
+  @include box-shadow(20px 20px 25px 8px transparentize($mainGrey, .6))
+
+//.s__about_us__content__video iframe
+//  position: absolute
+//  top: 0
+//  left: 0
+//  width: 100%
+//  height: 100%
+//  z-index: 100
+//  background: transparent
+
+.s__about_us__content__video img
+  bottom: 0
+  display: block
+  left: 0
+  margin: auto
+  width: 107%
+  position: absolute
+  right: 0
+  top: 0
+  border: none
+  height: auto
+  cursor: pointer
+  -webkit-transition: .4s all
+  -moz-transition: .4s all
+  transition: .4s all
+
+.s__about_us__content__video img:hover
+  -webkit-filter: brightness(75%)
+
+.s__about_us__content__video .play
+  height: 72px
+  width: 72px
+  left: 50%
+  top: 50%
+  margin-left: -36px
+  margin-top: -36px
+  position: absolute
+  background: url("//i.imgur.com/TxzC70f.png") no-repeat
+  cursor: pointer

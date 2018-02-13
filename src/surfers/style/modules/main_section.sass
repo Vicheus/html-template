@@ -21,6 +21,7 @@
 .header__logo
   font-size: 2em
   font-weight: bold
+  cursor: pointer
 
 .s__main__border_shadow
   box-shadow: inset 0 -150px 150px -30px $white
@@ -33,8 +34,13 @@
   background-color: $black
   color: $white
   text-align: center
+  transition: .2s all linear
+  will-change: background-color, color
   > svg
     height: 2em
+  &:hover
+    background-color: $white
+    color: $black
 
 .s__main__slogan
   padding-top: 210px
@@ -48,3 +54,4 @@
     font-style: italic
     font-size: 1.5em
     color: $white
+    margin-top: 15px

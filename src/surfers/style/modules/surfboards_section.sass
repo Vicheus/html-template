@@ -1,0 +1,163 @@
+.s__surfboards
+  width: 100%
+  height: 48em
+
+.s__surfboards__content
+  position: relative
+  width: 64em
+  height: 37.5em
+  margin: 0 auto
+  transform: translateY(-25%)
+  background-image: -webkit-linear-gradient(-45deg, $lightestBlue 35.65%, $white 0%)
+  @include box-shadow(5px -5px 25px 8px transparentize($mainGrey, .6))
+
+.s__surfboards__image
+  flex: 1
+  background: url('../assets/img/Board.png') no-repeat center
+
+.s__surfboards__info
+  position: relative
+  flex: 1.24
+
+.s__surfboards__info__header
+  padding-left: 7.375em
+
+.s__surfboards__info__nav
+  position: absolute
+  top: 50px
+  right: -40px
+  width: 80px
+  height: 40px
+  background-color: $goldenYellow
+  cursor: pointer
+
+.s__surfboards__info__nav__arrow
+  margin-top: 8px
+  line-height: 1
+  font-size: 1.5em
+  color: $white
+  font-weight: bold
+  &--left
+    @extend .s__surfboards__info__nav__arrow
+    margin-left: 5px
+  &--right
+    @extend .s__surfboards__info__nav__arrow
+    margin-right: 5px
+    float: right
+
+.s__surfboards__info__title
+  font-size: 1.5em
+  font-weight: bold
+  font-family: Montserrat sans-serif
+  line-height: 1.2
+  width: 340px
+  margin: 1.4em 0 0
+
+.s__surfboards__info__rating__counter
+  height: 3em
+  padding: 1em
+  background-color: $black
+  color: $white
+  font-weight: bold
+
+.s__surfboards__info__rating__stars
+  color: $goldenYellow
+  padding: 16px 0
+  font-size: .75em
+  & svg
+    cursor: pointer
+    transition: all .2s linear
+    &:hover
+      color: $goldenYellow
+      transform: scale(1.2)
+  > span
+    color: $darkGrey
+
+.s__surfboards__info__body
+  width: 100%
+  margin-top: 30px
+
+.s__surfboards__info__body__images
+  width: 19.8%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.s__surfboards__info__body__image
+  width: 4.375em
+  height: 4.375em
+  border: solid 1px $mainGrey
+  &--first
+    @extend .s__surfboards__info__body__image
+    background: url('../assets/img/Board_small.png') no-repeat
+  &--second
+    @extend .s__surfboards__info__body__image
+    background: url('../assets/img/Board1_small.png') no-repeat
+  &--third
+    @extend .s__surfboards__info__body__image
+    background: url('../assets/img/Board2_small.png') no-repeat
+  &--fourth
+    @extend .s__surfboards__info__body__image
+    background: url('../assets/img/Board3_small.png') no-repeat
+  &:active,
+  &:focus
+    border: 2px solid $lightBlue
+
+.s__surfboards__info__body__content
+  width: 80.2%
+
+.s__surfboards__info__body__content__tabs
+  width: 396px
+  border-bottom: 1.5px solid transparentize($mainGrey, .5)
+  color: $mainGrey
+  text-transform: uppercase
+  font-family: Raleway sans-serif
+  font-weight: bold
+
+.s__surfboards__info__body__content__tab
+  cursor: pointer
+  display: inline-block
+  margin-bottom: 6px
+  &:not(:last-child)
+    margin-right: 30px
+
+.s__surfboards__info__body__content__description
+  color: $mainGrey
+  width: 396px
+  padding: 25px 0 34px
+  font-family: Raleway sans-serif
+  line-height: 1.3
+  font-size: 20px
+
+.s__surfboards__info__body__content__footer__price
+  display: inline-block
+  vertical-align: middle
+  font-size: 30px
+  font-weight: bold
+  font-family: Montserrat sans-serif
+  margin-right: 30px
+
+.s__surfboards__info__body__content__buy
+  @include button-default($lightBlue)
+
+.s__surfboards__info__footer
+  margin-top: 4.25em
+
+.s__surfboards__info__footer__all_boards
+  position: relative
+  font-family: Montserrat sans-serif
+  font-weight: bold
+  color: $lightBlue
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -7px
+    height: 4px
+    width: 0
+    background-color: $lightBlue
+    transition: width .3s linear
+  &:hover
+    &:after
+      width: 100%
+
