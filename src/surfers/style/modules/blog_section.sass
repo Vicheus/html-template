@@ -1,0 +1,38 @@
+.s__blog
+  text-align: center
+  margin-bottom: 174px
+
+.s__blog__title
+  @include title-crossed($black)
+  margin-bottom: 90px
+
+.s__blog__post
+  position: relative
+  width: 270px
+  color: $mainGrey
+  cursor: pointer
+  transition: all .3s linear
+  &:not(:last-child)
+    margin-right: 30px
+  &:hover
+    transform: translateZ(10px)
+    @include box-shadow(5px 10px 30px 10px transparentize($mainGrey, .6))
+    color: $darkBlue
+
+.s__blog__post__image__overlay
+  @include overlay-mixin($black, .8)
+
+
+.s__blog__post__image
+  background: url("../assets/img/posts/Photo2.png") no-repeat center
+  height: 200px
+
+.s__blog__post__title
+  padding: 25px
+  font-family: Raleway sans-serif
+
+.s__blog__button
+  @include button-default($lightBlue)
+  margin-top: 40px
+  font-family: Montserrat sans-serif
+  font-size: 14px

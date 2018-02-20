@@ -27,31 +27,12 @@
   margin-right: 50px
 
 .s__about_us__content__article__title
-  position: relative
-  margin-bottom: 70px
-  text-align: center
-  text-transform: uppercase
-  &:before, &:after
-    content: ''
-    position: absolute
-    background: $darkGrey
-    transform: rotateZ(45deg)
-  &:before
-    top: 40px
-    left: calc(50% + 5px)
-    width: 3px
-    margin-left: -1.5px
-    height: 20px
-  &:after
-    top: 50px
-    left: calc(50% - 5px)
-    height: 3px
-    margin-top: -1.5px
-    width: 20px
+  @include title-crossed($darkGrey)
 
 .s__about_us__content__article__text
   line-height: 1.7
   margin-bottom: 25px
+  margin-top: 70px
 
 .s__about_us__content__article__link
   position: relative
