@@ -1,7 +1,13 @@
 .s__socials
   position: relative
 
+.s_social_networks
+  position: relative
+  padding: 110px 0 60px 0
+
 .s_social_networks__insta
+  position: absolute
+  top: 0
   display: flex
   flex-wrap: wrap
   width: 620px
@@ -57,11 +63,12 @@
 .s_social_networks__facebook
   width: 420px
   height: 326px
-  margin-top: 116px
+  margin-left: 650px
+  padding-top: 30px
   background-image: -webkit-linear-gradient(-90deg, $facebookBlue 50%, $facebookGrey 0%)
 
 .s_social_networks__facebook__title
-  margin: 30px auto
+  margin: 0 auto 30px
   height: 32px
   background: url("../assets/img/facebook/Logo Facebook.png") no-repeat center
 
@@ -105,7 +112,7 @@
 .s_social_networks__facebook__likes
   width: 340px
   margin: 0 auto
-  padding: 10px
+  padding: 5px
   background: $white
 
 .s_social_networks__facebook__likes__content
@@ -115,11 +122,11 @@
   > p
     font-size: .75em
     font-family: Helvetica sans-serif
-    margin-bottom: 10px
+    margin-bottom: 5px
 
 .s_social_networks__facebook__likes__content__friend
-  width: 30px
-  height: 30px
+  width: 33px
+  height: 33px
   background: url("../assets/img/facebook/Friend.png") no-repeat center
   &:not(:last-child)
     margin-right: 2px
