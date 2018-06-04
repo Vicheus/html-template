@@ -1,0 +1,764 @@
+@import "vars"
+
+body
+	width: 100%
+	font-family: "Roboto", sans-serif
+	font-weight: normal
+	overflow-x: hidden
+	line-height: 1
+
+body,h1,h2,h3,h4,h5,h6,ul,p
+	margin: 0
+
+a
+	text-decoration: none
+
+ul
+	padding: 0
+	list-style-type: none
+
+.container,
+.flex_container
+	width: 1200px
+	margin: 0 auto
+.flex_container
+	display: flex
+.space_between
+	justify-content: space-between
+
+//header
+
+header
+	height: 75px
+	line-height: 75px
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+.header_nav
+	float: right
+
+.header_nav_element
+	display: inline-block
+	margin-left: 40px
+
+.header_nav__link
+	text-transform: uppercase
+	font-size: 14px
+	color: #fff
+	position: relative
+	transition: all .3s
+	&:after
+		content: ''
+		position: absolute
+		bottom: -7px
+		left: 0
+		width: 0
+		height: 2px
+		background-color: $activeLink
+		transition: all .3s
+	&:hover
+		color: $activeLink
+	&:hover
+		&:after
+			width: 100%
+
+//!!!!!!!
+
+
+//start_s
+
+.start_s
+	height: 100vh
+	background-image: url('../img/start_bg.jpg')
+	background-size: cover
+	display: flex
+	align-items: center
+	justify-content: center
+	color: #fff
+
+.s_title_block
+	width: 800px
+	text-align: center
+
+.s_title_block__descr
+	font-family: $handWritenFont
+	font-size: 60px
+	margin-bottom: 30px
+
+.s_title_block__title
+	font-family: $titleFont
+	font-weight: 700
+	font-size: 100px
+	text-transform: uppercase
+
+.s_title_block__line
+	height: 3px
+	width: 70px
+	background-color: #fff
+	border: none
+	margin: 35px auto
+
+//!!!!!!
+
+
+//about section
+
+.section_header
+	width: 960px
+	text-align: center
+	margin: 110px auto 0 auto
+
+.section_header__title
+	font-family: $handWritenFont
+	font-weight: normal
+	font-size: 24px
+	margin-bottom: 25px
+
+.section_header__about
+	text-transform: uppercase
+	font-family: $titleFont
+	font-weight: 700
+	font-size: 32px
+
+.section_header__line
+	margin: 48px auto
+	width: 60px
+	height: 2px
+	background-color: $mainColor2
+	border: none
+	
+.section_header__desc
+	color: #a0a0a0
+	line-height: 1.5
+
+.about_item
+	width: 31%
+	position: relative
+	transition: all .4s
+	line-height: 0
+	margin-top: 100px
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $mainColor
+		z-index: -1
+		transition: all .4s
+	&:hover
+		transform: translate(-10px, -10px)
+		&:after
+			transform: translate(10px, 10px)
+		.about_item_overlay
+			opacity: 1
+
+.about_item__img
+	width: 100%
+
+.about_item_overlay
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	opacity: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: all .4s
+	background-color: transparentize($mainColor2, .3)
+
+.about_item_overlay__content
+	text-transform: uppercase
+	font-size: 24px
+	color: #fff
+	font-family: $titleFont
+	font-weight: 700
+
+//!!1!!!!!!!!!!!
+
+.facts
+	background-color: $mainColor
+	height: 270px
+	margin-top: 110px
+	>.flex_container:first-of-type
+		border-left: 1px solid #fff
+
+.facts_item
+	width: 20%
+	height: 270px
+	text-align: center
+	color: #fff
+	border-right: 1px solid #fff
+
+.facts_item__number
+	font-family: $titleFont
+	font-size: 70px
+	font-weight: 700
+	margin-top: 90px
+	margin-bottom: 26px
+	line-height: 56px
+
+.facts_item_text
+	text-transform: uppercase
+	font-family: $titleFont
+	font-size: 12px
+	font-weight: normal
+
+.service_block
+	display: flex
+
+.service_block_content_top, .service_block_content_bottom
+	background: url(../img/clock.jpg) no-repeat 32px 0
+	width: 30%
+
+.service_block_content_bottom
+	margin-bottom: 122px
+
+.service_block_content_top__header, .service_block_content_top__desc, .service_block_content_bottom__header, .service_block_content_bottom__desc
+	padding-left: 92px
+	font-size: 14px
+
+.service_block_content_top__header, .service_block_content_bottom__header
+	font-family: $titleFont
+	text-transform: uppercase
+	margin-bottom: 20px
+
+.service_block_content_top__desc, .service_block_content_bottom__desc
+	font-family: $mainFont
+	line-height: 1.5
+	color: #999999
+
+.service_block_line
+	width: 100%
+	margin: 50px 0
+	color: #999999
+
+.features
+	width: 100%
+	height: 856px
+	background: url(../img/features_bg.jpg) no-repeat -500px center
+	position: relative
+	z-index: -1
+	&:before
+		content: ''
+		height: 100%
+		width: 100%
+		background-color: transparentize(#fff, .15)
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+
+.features_images
+	height: 100%
+	overflow: hidden
+	text-align: center
+	.features_images_laptop
+		width: 530px
+
+.features_images_phone
+	width: 308px
+	position: absolute
+	top: 50%
+	left: 60%
+
+.service2_content
+	display: flex
+	justify-content: center
+	margin: 96px 0 122px 0
+	height: 320px
+	.service2_content__image
+		width: 50%
+		background-image: url(../img/start_bg.jpg)
+		-webkit-background-size: cover
+		background-size: cover
+		margin-right: 30px
+	.service2_content__services
+		width: 50%
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		justify-content: space-between
+		.service2_content__services__desc
+			margin-top: -1px
+			border: 1px solid $lightGrey
+			display: block
+			padding: 20px
+			color: $lightGrey
+		.service2_content__services__name
+			border: 1px solid $lightGrey
+			height: 50px
+			background: url(../img/photo.png) no-repeat 10px 10px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.service2_content__services__name__title
+				margin-left: 50px
+				text-transform: uppercase
+				font-family: $titleFont
+				color: #000
+				font-size: 14px
+
+.service2_content__service__top_block
+	width: 100%
+
+.service2_content__services__name__show_more
+	display: inline-block
+	>img
+		width: 25px
+		margin-right: 10px
+
+.service2_content__services__name__show_more--up
+	transform: rotateX(180deg)
+
+.service2_content__services__name__show_more--left
+	transform: rotateZ(-90deg)
+
+.service2_content__services__name__show_more--right
+	transform: rotateZ(90deg)
+
+.quote_s
+	width: 100%
+	background-color: #f8f8f8
+	.quote_s_nav
+		margin: 0 10px
+		display: flex
+		justify-content: center
+		align-items: center
+		.quote_s_nav_arrow
+			display: block
+			width: 25px
+			height: 25px
+	.quote_s_content
+		margin: 70px 90px
+		&:after
+			clear: both
+		.quote_s_content__img
+			float: left
+			margin-right: 60px
+		.quote_s_content__text__main_text
+			font-family: $mainFont
+			font-style: italic
+			font-weight: 300
+			font-size: 24px
+			color: $lightGrey
+			line-height: 1.5
+		.quote_s_content__text_name
+			display: flex
+			align-items: center
+			margin-top: 20px
+			.quote_s_content__line
+				margin-left: 0
+				width: 60px
+				height: 3px
+				border: none
+				background-color: $mainColor2
+				margin-right: 10px
+			.quote_s_content__author
+				font-family: $handWritenFont
+				font-weight: normal
+				font-size: 24px
+
+.quote_s_nav_img
+	width: 25px
+
+.quote_s_nav_img--right
+	transform: rotateZ(-90deg)
+
+.quote_s_nav_img--left
+	transform: rotateZ(90deg)
+
+.meet_team_s
+	margin-bottom: 118px
+
+.meet_team_s_member
+	width: 30%
+	margin-top: 96px
+	text-align: center
+	.meet_team_s_member_img
+		position: relative
+		width: 100%
+		transition: all .3s
+		line-height: 0
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: $mainColor
+			z-index: -1
+			transition: all .3s
+		&:hover
+			transform: translate(-10px, -10px)
+			&:after
+				transform: translate(10px, 10px)
+			.block_overlay
+				opacity: 1
+		.meet_team_s_member_photo
+			height: 470px
+			width: 100%
+	.meet_team_s_member_name
+		display: inline-block
+		font-family: $titleFont
+		font-size: 14px
+		text-transform: uppercase
+		margin: 20px auto 15px auto
+	.meet_team_s_member_position
+		display: inline-block
+		font-family: $titleFont
+		font-size: 12px
+		font-weight: normal
+		color: $lightGrey
+		margin: 0 auto
+
+.block_overlay
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	opacity: 0
+	background-color: transparentize($mainColor2, .3)
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: all .3s
+	.block_overlay_image
+		width: 50px
+		height: 50px
+		text-align: center
+		margin-left: 1px
+		background-color: #fce38a
+		transition: all .3s
+		i
+			color: $mainColor2
+			font-size: 30px
+			line-height: 50px
+			transition: all .3s
+		&:hover
+			background-color: $mainColor2
+			i
+				color: #fff
+
+.logo_s
+	width: 100%
+	background-color: #f8f8f8
+	display: flex
+	justify-content: center
+	align-items: center
+	.logo_s_img
+		width: 100%
+		margin: 60px auto
+
+.our_work_s
+	width: 100%
+
+.our_work_s__content
+	margin-top: 100px
+	width: 100%
+	display: flex
+	.our_work_s_content__block_4
+		width: 50%
+		display: flex
+		flex-wrap: wrap
+	.our_work_s_content__block_vertical
+		width: 25%
+	.our_work_s_content__block_2
+		width: 25%
+		display: flex
+		flex-wrap: wrap
+
+.our_work_s_content__block_4
+	.our_work_s_content__block__img
+		width: 50%
+		height: 50%
+
+.our_work_s_content__block_2
+	.oour_work_s_content__block__img
+		width: 100%
+		height: 50%
+
+.our_work_s_content__block_vertical
+	.our_work_s_content__block__img
+		width: 100%
+		height: 100%
+
+.our_work_s_content__block__img_main
+	width: 100%
+	height: 100%
+
+.round_img
+	border-radius: 50%
+
+.client_s
+	width: 100%
+	height: 830px
+	position: relative
+	background: url(../img/feedback_banner.png) no-repeat center
+	z-index: 1
+	.client_s_section
+		height: 100%
+		overflow: hidden
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: transparentize(#fff, .2)
+		z-index: -1
+
+.client_s_container
+	display: flex
+	width: 50%
+	flex-wrap: wrap
+	margin: 84px 52px 0 40px
+	.client_s_block
+		display: flex
+		text-align: left
+		width: 100%
+		margin-bottom: 70px
+		.client_s_block_img
+			width: 110px
+			margin: 0 30px auto 0
+		.client_s_block_text
+			margin-top: 12px
+			color: #b3b3b3
+			width: 382px
+			.client_s_block_text_title
+				font-family: $titleFont
+				font-size: 14px
+				text-transform: uppercase
+				color: #000
+			.client_s_block_text_position
+				font-family: $mainFont
+				font-size: 14px
+				font-style: italic
+				margin: 16px 0 16px 0
+			.client_s_block_text_line
+				display: inline-block
+				border: none
+				width: 60px
+				height: 2px
+				background-color: $mainColor2
+				margin-bottom: 24px
+			.client_s_block_text_desc
+				font-family: $mainFont
+				font-size: 14px
+
+.flex_center
+	display: flex
+	align-items: center
+	justify-content: center
+
+.blog_s_block
+	width: 30%
+	margin-bottom: 114px
+	.blog_s_block__img
+		position: relative
+		.blog_s_block__img__main
+			height: 240px
+		.blog_s_block__overlay
+			width: 60px
+			height: 70px
+			position: absolute
+			top: 160px
+			left: -10px
+			color: #fff
+			background-color: $mainColor
+			.blog_s_block__overlay__center
+				text-align: center
+				>span
+					line-height: 24px
+					font-family: $titleFont
+					font-size: 24px
+					font-weight: bold
+				>p
+					font-family: $mainFont
+					font-size: 20px
+					font-style: italic
+					margin-top: 8px
+	.blog_s_block_title
+		text-transform: uppercase
+		font-family: $titleFont
+		font-size: 14px
+		font-weight: normal
+		margin: 20px 0
+	.blog_s_block_desc
+		font-family: $mainFont
+		font-size: 14px
+		font-weight: normal
+		color: #b3b3b3
+	.blog_s_block_info
+		text-align: left
+		.blog_s_block_info__img
+			margin-right: 4px
+		>span
+			margin-right: 20px
+			color: $lightGrey
+			font-style: italic
+
+.blog_s_block_line
+	width: 100%
+	height: 1px
+	border: none
+	background-color: #e5e5e5
+	margin: 20px 0
+		
+.map_s
+	width: 100%
+	height: 200px
+	background: url(../img/map_bg.png) no-repeat 0 0
+	position: relative
+	z-index: 1
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		background-color: transparentize(#fff, .2)
+	.map_s__content
+		width: 200px
+		color: $mainColor2
+		text-align: center
+		.map_s__content_title
+			text-transform: uppercase
+			font-family: $titleFont
+			font-weight: bold
+			font-size: 24px
+			margin: 18px auto
+		.section_header__line
+			margin: 0 auto
+
+footer
+	margin-top: 75px
+
+.footer_s__mogo
+	width: 40.16%
+	color: #b3b3b3
+	.footer_s__mogo__logo
+		font-family: $titleFont
+		font-weight: bold
+		font-size: 46px
+	.footer_s__mogo__text
+		margin: 42px 0
+		font-family: $mainFont
+		font-size: 15px
+		font-weight: normal
+	.footer_s__mogo__followers
+		color: #000
+		font-family: $titleFont
+		font-size: 12px
+		font-weight: normal
+		margin-bottom: 20px
+		>span
+			font-size: 15px
+			font-weight: bold
+	.footer_s__mogo__follow_us
+		margin-top: 20px
+		line-height: 0
+		>span
+			font-family: $mainFont
+			font-weight: 300
+			font-style: italic
+			font-size: 15px
+			margin-right: 22px
+		.footer_s__mogo__follow_us_img
+			margin-right: 20px
+			height: 15px
+	.footer_s__mogo__subscribe
+		margin-top: 39px
+		display: flex
+		.footer_s__mogo__subscribe__mail
+			padding-left: 10px
+			width: 228px
+			height: 34px
+			border: 1px solid $lightGrey
+			display: block
+			&::-webkit-input-placeholder
+				font-family: $mainFont
+				font-weight: 300
+				font-style: normal
+				font-size: 15px
+				color: $lightGrey
+		.footer_s__mogo__subscribe__button
+			display: block
+			text-transform: uppercase
+			color: #fff
+			width: 228px
+			height: 38px
+			line-height: 0
+
+.footer_s__blogs
+	width: 28.5%
+	.footer_s__blogs_post
+		display: flex
+		margin-top: 30px
+		.footer_s__blogs_post_image
+			margin-right: 20px
+			line-height: 0
+			.footer_s__blogs_post_img
+				width: 120px
+		.footer_s__blogs_post_info
+			.footer_s__blogs_post_info_title
+				text-transform: uppercase
+				font-family: $titleFont
+				font-weight: normal
+				font-size: 12px
+				margin: 20px 0 10px 0
+			.footer_s__blogs_post_info_date
+				font-family: $mainFont
+				font-weight: 300
+				font-style: italic
+				font-size: 13px
+				color: $lightGrey
+
+.footer_s__block__title
+	text-transform: uppercase
+	font-family: $titleFont
+	font-weight: normal
+	font-size: 14px
+	margin-bottom: 40px
+
+.footer_s__instagram
+	width: 22.75%
+	.footer_s__instagram__photos
+		display: flex
+		flex-wrap: wrap
+		.footer_s__instagram__photos_img
+			margin-right: 3px
+			.footer_s__instagram__photos_img_picture
+				width: 100%
+	.footer_s__instagram__view_more
+		font-family: $mainFont
+		font-weight: 300
+		font-style: italic
+		font-size: 13px
+		color: #bebebe
+		margin-top: 14px
+
+.footer__line
+	margin-top: 68px
+	width: 100%
+	height: 1px
+	border: none
+	background-color: #e5e5e5
+
+.footer_s__rights
+	text-align: center
+	line-height: 60px
+	font-family: $mainFont
+	font-weight: normal
+	font-size: 14px
+	>span
+		color: $mainColor2
